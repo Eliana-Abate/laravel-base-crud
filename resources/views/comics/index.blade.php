@@ -19,18 +19,33 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row"></th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
+                    @forelse ($comics as $comic)
+                        <tr>
+                            <th scope="row">{{$comic->id}}</th>
+                            <td>{{$comic->title}}</td>
+                            <td>{{$comic->description}}</td>
+                            <td>{{$comic->thumb}}</td> 
+                            <td>{{$comic->price}}</td>
+                            <td>{{$comic->series}}</td>
+                            <td>{{$comic->sale_date}}</td>
+                            <td>{{$comic->type}}</td>
+                        </tr>
+                        
+                    @empty
+                    
+                        <tr class="text-center text-danger">
+                            <th colspan="8"> Nessun fumetto disponibile</th>
+                        </tr>
+                        
+                    @endforelse
+                  
                 </tbody>
               </table>
+
+              <div class="text-center">
+                <h4>Go to <a href="{{route('home')}}">Home</a></h4>
+        
+            </div>
 
         </div>
 
