@@ -17,6 +17,8 @@ Route::get('/', 'HomeController@index' )->name('home');
 
 Route::get('/comics', 'ComicController@index')->name('comics.index');
 
+Route::get('/comics/{id}', 'ComicController@show')->name('comics.show');
+
  
 
 
