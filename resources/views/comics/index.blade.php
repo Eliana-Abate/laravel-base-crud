@@ -6,7 +6,7 @@
     <section id="comics-list" class="pt-5">
         <h1 class="text-white text-center pb-5">All Comics</h1>
         <div class="container">
-            <table class="table bg-white rounded">
+            <table class="table bg-white border border-5 border-dark">
                 <thead>
                   <tr>
                     <th class="p-3" scope="col">#</th>
