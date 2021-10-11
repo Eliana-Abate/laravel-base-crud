@@ -16,6 +16,7 @@
                     <th scope="col">Series</th>
                     <th scope="col">Sale Date</th>
                     <th scope="col">Type</th>
+                    <th scope="col">Dettaglio</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -29,12 +30,13 @@
                             <td>{{$comic->series}}</td>
                             <td>{{$comic->sale_date}}</td>
                             <td>{{$comic->type}}</td>
+                            <td><a class="btn btn-success" href="{{route('comics.show', $comic->id)}}">Show</a></td>
                         </tr>
                         
                     @empty
                     
                         <tr class="text-center text-danger">
-                            <th colspan="8"> Nessun fumetto disponibile</th>
+                            <th colspan="9"> Nessun fumetto disponibile</th>
                         </tr>
                         
                     @endforelse
