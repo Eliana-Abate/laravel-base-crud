@@ -22,6 +22,10 @@
                 </div>
     
             </div>
+
+            <div class="text-center pt-4">
+                <h6 class="text-warning">Return to all <a href="{{route('comics.index')}}">Comics</a></h6>
+            </div>
         </div>
         
 
