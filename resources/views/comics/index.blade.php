@@ -3,34 +3,37 @@
 @section('title') Comics @endsection
 
 @section('content') 
-    <section id="comics-list">
+    <section id="comics-list" class="pt-5">
+        <h1 class="text-white text-center pb-5">All Comics</h1>
         <div class="container">
-            <table class="table">
+            <table class="table bg-white rounded">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Title</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Cover</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Series</th>
-                    <th scope="col">Sale Date</th>
-                    <th scope="col">Type</th>
-                    <th scope="col">Dettaglio</th>
+                    <th class="p-3" scope="col">#</th>
+                    <th class="p-3" scope="col">Title</th>
+                    <th class="p-3" scope="col">Description</th>
+                    <th class="p-3" scope="col">Cover</th>
+                    <th class="p-3" scope="col">Price</th>
+                    <th class="p-3" scope="col">Series</th>
+                    <th class="p-3" scope="col">Sale Date</th>
+                    <th class="p-3" scope="col">Type</th>
+                    <th class="p-3" scope="col">Dettaglio</th>
                   </tr>
                 </thead>
                 <tbody>
                     @forelse ($comics as $comic)
                         <tr>
-                            <th scope="row">{{$comic->id}}</th>
-                            <td>{{$comic->title}}</td>
-                            <td>{{$comic->description}}</td>
-                            <td>{{$comic->thumb}}</td> 
-                            <td>{{$comic->price}}</td>
-                            <td>{{$comic->series}}</td>
-                            <td>{{$comic->sale_date}}</td>
-                            <td>{{$comic->type}}</td>
-                            <td><a class="btn btn-success" href="{{route('comics.show', $comic->id)}}">Show</a></td>
+                            <th class="p-3" scope="row">{{$comic->id}}</th>
+                            <td class="p-3">{{$comic->title}}</td>
+                            <td class="p-3 text-truncate" style="max-width: 300px;">{{$comic->description}}</td>
+                            <td class="p-3">
+                                <img class="img-fluid" src="{{$comic->thumb}}" alt="{{$comic->title}}" width="30%">
+                            </td> 
+                            <td class="p-3">{{$comic->price}}</td>
+                            <td class="p-3">{{$comic->series}}</td>
+                            <td class="p-3">{{$comic->sale_date}}</td>
+                            <td class="p-3">{{$comic->type}}</td>
+                            <td class="p-3"><a class="btn btn-success" href="{{route('comics.show', $comic->id)}}">Show</a></td>
                         </tr>
                         
                     @empty
@@ -42,11 +45,10 @@
                     @endforelse
                   
                 </tbody>
-              </table>
+            </table>
 
-              <div class="text-center">
-                <h4>Go to <a href="{{route('home')}}">Home</a></h4>
-        
+            <div class="text-center pt-4">
+                <h6 class="text-warning">Return to <a href="{{route('home')}}">Home</a></h6>
             </div>
 
         </div>
