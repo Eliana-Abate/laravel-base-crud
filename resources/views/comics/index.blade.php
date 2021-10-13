@@ -47,9 +47,12 @@
                 </tbody>
             </table>
 
-            <div class="text-center pt-4">
-                <h6 class="text-warning">Return to <a href="{{route('home')}}">Home</a></h6>
+            <div class="d-flex justify-content-center pt-3">
+                <a class="btn btn-warning me-3" href="{{route('home')}}">Home</a>
+                <a class="btn btn-primary" href="{{route('comics.create')}}">Aggiungi un nuovo fumetto</a>
             </div>
+
+           
 
         </div>
 
