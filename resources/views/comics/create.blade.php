@@ -55,19 +55,9 @@
                     <button type="reset" class="btn btn-secondary me-3">Reset</button>
                     <button type="submit" class="btn btn-primary">Aggiungi</button>
                 </div>
-                
-                
             </form>
-            
-
-        </div>
-
-       
+        </div> 
     </div>
-    
-
 </section>
-
-
 
 @endsection
