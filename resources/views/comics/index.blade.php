@@ -10,14 +10,14 @@
                 <thead>
                   <tr>
                     <th class="p-3" scope="col">#</th>
-                    <th class="p-3" scope="col">Title</th>
-                    <th class="p-3" scope="col">Description</th>
-                    <th class="p-3" scope="col">Cover</th>
-                    <th class="p-3" scope="col">Price</th>
-                    <th class="p-3" scope="col">Series</th>
-                    <th class="p-3" scope="col">Sale Date</th>
-                    <th class="p-3" scope="col">Type</th>
-                    <th class="p-3 text-center" scope="col">Dettaglio</th>
+                    <th class="p-3" scope="col">Titolo</th>
+                    <th class="p-3" scope="col">Descrizione</th>
+                    <th class="p-3" scope="col">Copertina</th>
+                    <th class="p-3" scope="col">Prezzo</th>
+                    <th class="p-3" scope="col">Serie</th>
+                    <th class="p-3" scope="col">Data</th>
+                    <th class="p-3" scope="col">Tipologia</th>
+                    <th class="p-3 text-center" scope="col">Azioni</th>
                   </tr>
                 </thead>
                 <tbody>
