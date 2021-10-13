@@ -10,12 +10,12 @@
                 <div class="row">
                     <div class="col-6 mb-3">
                         <label for="title" class="form-label">Titolo</label>
-                        <input type="text" class="form-control" id="title" name="title">
+                        <input type="text" class="form-control" id="title" name="title" required>
                     </div>
 
                     <div class="col-6 mb-3">
                           <label for="series" class="form-label">Serie</label>
-                          <input type="text" class="form-control" id="series" name="series">
+                          <input type="text" class="form-control" id="series" name="series" required>
                     </div>
                 </div>
                 
@@ -34,12 +34,12 @@
                 <div class="row">
                     <div class="col-4 mb-3">
                         <label for="price" class="form-label">Prezzo</label>
-                        <input type="text" class="form-control" id="price" name="price">
+                        <input type="text" class="form-control" id="price" name="price" required>
                     </div>
 
                     <div class="col-4 mb-3">
                         <label for="sale_date" class="form-label">Data di uscita</label>
-                        <input type="text" class="form-control" id="sale_date" name="sale_date">
+                        <input type="text" class="form-control" id="sale_date" name="sale_date" required>
                     </div>
 
                     <div class="col-4 mb-3">
