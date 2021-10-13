@@ -6,7 +6,7 @@
     <h1 class="text-white text-center pb-5">Aggiungi un nuovo fumetto</h1>
     <div class="container">
         <div class="row border border-5 border-primary bg-white p-5">
-            <form method="POST" action="">
+            <form method="POST" action="{{route('comics.store')}}">
                 @csrf
 
                 <div class="row">
