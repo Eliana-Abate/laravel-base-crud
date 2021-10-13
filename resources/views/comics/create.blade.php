@@ -6,7 +6,9 @@
     <h1 class="text-white text-center pb-5">Aggiungi un nuovo fumetto</h1>
     <div class="container">
         <div class="row border border-5 border-primary bg-white p-5">
-            <form>
+            <form method="POST" action="">
+                @csrf
+
                 <div class="row">
                     <div class="col-6 mb-3">
                         <label for="title" class="form-label">Titolo</label>
@@ -31,7 +33,7 @@
                     <input type="text" class="form-control" id="thumb" name="thumb">
                 </div>
 
-                <div class="row">
+                <div class="row mb-5">
                     <div class="col-4 mb-3">
                         <label for="price" class="form-label">Prezzo</label>
                         <input type="text" class="form-control" id="price" name="price" required>
@@ -49,10 +51,12 @@
 
                 </div>
 
+                <div class="d-flex justify-content-center">
+                    <button type="reset" class="btn btn-secondary me-3">Reset</button>
+                    <button type="submit" class="btn btn-primary">Aggiungi</button>
+                </div>
                 
                 
-                <button type="reset" class="btn btn-secondary">Reset</button>
-                <button type="submit" class="btn btn-primary">Aggiungi</button>
             </form>
             
 
