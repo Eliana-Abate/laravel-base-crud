@@ -50,7 +50,7 @@
                 </tbody>
             </table>
 
-            <div class="d-flex justify-content-center pt-3">
+            <div class="d-flex justify-content-center pt-3 py-5">
                 <a class="btn btn-warning me-3" href="{{route('home')}}">Home</a>
                 <a class="btn btn-primary" href="{{route('comics.create')}}">Aggiungi un nuovo fumetto</a>
             </div>
