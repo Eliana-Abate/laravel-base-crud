@@ -17,7 +17,7 @@
                     <th class="p-3" scope="col">Series</th>
                     <th class="p-3" scope="col">Sale Date</th>
                     <th class="p-3" scope="col">Type</th>
-                    <th class="p-3" scope="col">Dettaglio</th>
+                    <th class="p-3 text-center" scope="col">Dettaglio</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -33,7 +33,10 @@
                             <td class="p-3">{{$comic->series}}</td>
                             <td class="p-3">{{$comic->sale_date}}</td>
                             <td class="p-3">{{$comic->type}}</td>
-                            <td class="p-3"><a class="btn btn-success" href="{{route('comics.show', $comic->id)}}">Show</a></td>
+                            <td class="p-3 text-center">
+                                <a class="btn btn-success" href="{{route('comics.show', $comic->id)}}">Show</a>
+                                <a class="btn btn-warning mt-2" href="{{route('comics.edit', $comic->id)}}">Edit</a>
+                            </td>
                         </tr>
                         
                     @empty
