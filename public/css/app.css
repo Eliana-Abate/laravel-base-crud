@@ -11244,5 +11244,91 @@ textarea.form-control-lg {
   }
 }
 body {
-  background-color: #3f3f3f;
+  background-color: #1a1818;
+}
+
+#home-container {
+  width: 100%;
+  background-image: url("../images/skyline-dark.png");
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: -200px;
+  background-repeat: no-repeat;
+}
+
+.img-flight-box {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  transform-origin: bottom;
+}
+
+.img-bounce-box {
+  margin-top: 130px;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+
+.superman-flight {
+  -webkit-animation-name: superman-flight;
+          animation-name: superman-flight;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.bounce {
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+
+@-webkit-keyframes superman-flight {
+  0% {
+    transform: translateY(0);
+    transform: translateX(-600px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes superman-flight {
+  0% {
+    transform: translateY(0);
+    transform: translateX(-600px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
