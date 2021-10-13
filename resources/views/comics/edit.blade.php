@@ -13,41 +13,41 @@
                 <div class="row">
                     <div class="col-6 mb-3">
                         <label for="title" class="form-label">Titolo</label>
-                        <input type="text" class="form-control" id="title" name="title" required>
+                        <input type="text" class="form-control" id="title" name="title" value="{{$comic->title}}" required>
                     </div>
 
                     <div class="col-6 mb-3">
                           <label for="series" class="form-label">Serie</label>
-                          <input type="text" class="form-control" id="series" name="series" required>
+                          <input type="text" class="form-control" id="series" name="series" value="{{$comic->series}}" required>
                     </div>
                 </div>
                 
                 <div class="mb-3">
                     
                     <label for="description" class="form-label">Descrizione</label>
-                    <textarea class="form-control"  id="description" name="description" style="height: 100px"></textarea>
+                    <textarea class="form-control"  id="description" name="description" value="{{$comic->description}}" style="height: 100px"></textarea>
 
                 </div>
 
                 <div class="mb-3">
                     <label for="thumb" class="form-label">Url copertina</label>
-                    <input type="text" class="form-control" id="thumb" name="thumb">
+                    <input type="text" class="form-control" id="thumb" name="thumb" value="{{$comic->thumb}}">
                 </div>
 
                 <div class="row mb-5">
                     <div class="col-4 mb-3">
                         <label for="price" class="form-label">Prezzo</label>
-                        <input type="text" class="form-control" id="price" name="price" required>
+                        <input type="text" class="form-control" id="price" name="price" value="{{$comic->price}}" required>
                     </div>
 
                     <div class="col-4 mb-3">
                         <label for="sale_date" class="form-label">Data di uscita</label>
-                        <input type="text" class="form-control" id="sale_date" name="sale_date" required>
+                        <input type="text" class="form-control" id="sale_date" name="sale_date" value="{{$comic->sale_date}}" required>
                     </div>
 
                     <div class="col-4 mb-3">
                         <label for="type" class="form-label">Tipologia</label>
-                        <input type="text" class="form-control" id="type" name="type">
+                        <input type="text" class="form-control" id="type" name="type" value="{{$comic->type}}">
                     </div>
 
                 </div>
