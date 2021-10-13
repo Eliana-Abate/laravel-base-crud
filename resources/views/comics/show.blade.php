@@ -22,13 +22,10 @@
                 </div>
 
                 <div class="mt-5 text-center">
+                    <a class="btn btn-warning mt-2 me-3" href="{{route('comics.index')}}">Back to All Comics</a>
                     <a class="btn btn-primary mt-2" href="{{route('comics.edit', $comic->id)}}">Edit</a>
                 </div>
     
-            </div>
-
-            <div class="text-center py-5">
-                <a class="btn btn-warning" href="{{route('comics.index')}}">Back to All Comics</a>
             </div>
         </div>
         
