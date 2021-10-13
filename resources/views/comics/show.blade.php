@@ -20,6 +20,10 @@
                     <h2>{{$comic->title}}</h2>
                     <p>{{$comic->description}}</p>
                 </div>
+
+                <div class="mt-5 text-center">
+                    <a class="btn btn-warning mt-2" href="{{route('comics.edit', $comic->id)}}">Edit</a>
+                </div>
     
             </div>
 
