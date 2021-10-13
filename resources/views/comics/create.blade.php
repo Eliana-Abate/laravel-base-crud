@@ -9,42 +9,42 @@
             <form>
                 <div class="row">
                     <div class="col-6 mb-3">
-                        <label for="" class="form-label">Titolo</label>
-                        <input type="text" class="form-control" id="">
+                        <label for="title" class="form-label">Titolo</label>
+                        <input type="text" class="form-control" id="title" name="title">
                     </div>
 
                     <div class="col-6 mb-3">
-                          <label for="" class="form-label">Serie</label>
-                          <input type="text" class="form-control" id="">
+                          <label for="series" class="form-label">Serie</label>
+                          <input type="text" class="form-control" id="series" name="series">
                     </div>
                 </div>
                 
                 <div class="mb-3">
                     
-                    <label for="" class="form-label">Descrizione</label>
-                    <textarea class="form-control"  id="" style="height: 100px"></textarea>
+                    <label for="description" class="form-label">Descrizione</label>
+                    <textarea class="form-control"  id="description" name="description" style="height: 100px"></textarea>
 
                 </div>
 
                 <div class="mb-3">
-                    <label for="" class="form-label">Url copertina</label>
-                    <input type="text" class="form-control" id="">
+                    <label for="thumb" class="form-label">Url copertina</label>
+                    <input type="text" class="form-control" id="thumb" name="thumb">
                 </div>
 
                 <div class="row">
                     <div class="col-4 mb-3">
-                        <label for="" class="form-label">Prezzo</label>
-                        <input type="text" class="form-control" id="">
+                        <label for="price" class="form-label">Prezzo</label>
+                        <input type="text" class="form-control" id="price" name="price">
                     </div>
 
                     <div class="col-4 mb-3">
-                        <label for="" class="form-label">Data di uscita</label>
-                        <input type="text" class="form-control" id="">
+                        <label for="sale_date" class="form-label">Data di uscita</label>
+                        <input type="text" class="form-control" id="sale_date" name="sale_date">
                     </div>
 
                     <div class="col-4 mb-3">
-                        <label for="" class="form-label">Tipologia</label>
-                        <input type="text" class="form-control" id="">
+                        <label for="type" class="form-label">Tipologia</label>
+                        <input type="text" class="form-control" id="type" name="type">
                     </div>
 
                 </div>
