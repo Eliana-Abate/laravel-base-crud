@@ -24,6 +24,11 @@
                 <div class="mt-5 text-center">
                     <a class="btn btn-warning mt-2 me-3" href="{{route('comics.index')}}">Back to All Comics</a>
                     <a class="btn btn-primary mt-2" href="{{route('comics.edit', $comic->id)}}">Edit</a>
+                    <form method="POST" action="{{route('comics.destroy', $comic->id)}}">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-danger mt-2" type="submit">Delete</button>
+                    </form>
                 </div>
     
             </div>
