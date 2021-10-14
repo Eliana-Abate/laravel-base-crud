@@ -48,7 +48,7 @@
                             <td class="p-3 text-center">
                                 <a class="btn btn-success" href="{{route('comics.show', $comic->id)}}">Show</a>
                                 <a class="btn btn-warning mt-2" href="{{route('comics.edit', $comic->id)}}">Edit</a>
-                                <form method="POST" action="{{route('comics.destroy', $comic->id)}}">
+                                <form method="POST" action="{{route('comics.destroy', $comic->id)}}" id="delete-event">
                                     @csrf
                                     @method('DELETE')
                                     <button class="btn btn-danger mt-2" type="submit">Delete</button>
@@ -66,6 +66,17 @@
                 </tbody>
             </table>
         </div>
-
     </section>
+@endsection
+
+@section('scripts')
+    <script>
+        const deleteItem = document.getElementById('delete-event');
+        deleteItem.addEventListener('submit', function(event){
+            event.preventDefault();
+            const confirmAction = window.confirm('Vuoi realmente rimuovere {{$comic->title}} dalla lista?');
+            if (confirmAction) this.submit();
+        });
+    </script>
+    
 @endsection
