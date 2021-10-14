@@ -11,7 +11,7 @@
                 <a class="btn btn-primary" href="{{route('comics.create')}}">Aggiungi un nuovo fumetto</a>
             </div> 
             
-            <table class="table bg-white border border-5 border-dark">
+            <table class="table bg-white border border-5 border-dark mb-5">
                 <thead>
                   <tr>
                     <th class="p-3" scope="col">#</th>
