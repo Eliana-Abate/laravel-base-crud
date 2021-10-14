@@ -27,7 +27,7 @@
                             <td class="p-3">{{$comic->title}}</td>
                             <td class="p-3 text-truncate" style="max-width: 300px;">{{$comic->description}}</td>
                             <td class="p-3">
-                                <img class="img-fluid" src="{{$comic->thumb}}" alt="{{$comic->title}}" width="30%">
+                                <img class="img-fluid" src="{{$comic->thumb}}" alt="{{$comic->title}}" width="80">
                             </td> 
                             <td class="p-3">{{$comic->price}}</td>
                             <td class="p-3">{{$comic->series}}</td>
@@ -36,6 +36,11 @@
                             <td class="p-3 text-center">
                                 <a class="btn btn-success" href="{{route('comics.show', $comic->id)}}">Show</a>
                                 <a class="btn btn-warning mt-2" href="{{route('comics.edit', $comic->id)}}">Edit</a>
+                                <form method="POST" action="{{route('comics.destroy', $comic->id)}}">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-danger mt-2" type="submit">Delete</button>
+                                </form>
                             </td>
                         </tr>
                         
