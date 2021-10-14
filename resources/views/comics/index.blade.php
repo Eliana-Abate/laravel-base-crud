@@ -6,6 +6,13 @@
     <section id="comics-list" class="pt-5">
         <h1 class="text-white text-center pb-5">All Comics</h1>
         <div class="container">
+
+            @if (session('action'))
+                <div class="alert alert-primary" role="alert">
+                    {{session('feedback')}}
+                </div> 
+            @endif
+
             <div class="d-flex justify-content-center py-3">
                 <a class="btn btn-warning me-3" href="{{route('home')}}">Home</a>
                 <a class="btn btn-primary" href="{{route('comics.create')}}">Aggiungi un nuovo fumetto</a>
