@@ -21,9 +21,9 @@
                     <p>{{$comic->description}}</p>
                 </div>
 
-                <div class="mt-5 text-center">
+                <div class="mt-5 text-center d-flex justify-content-center">
                     <a class="btn btn-warning mt-2 me-3" href="{{route('comics.index')}}">Back to All Comics</a>
-                    <a class="btn btn-primary mt-2" href="{{route('comics.edit', $comic->id)}}">Edit</a>
+                    <a class="btn btn-primary mt-2 me-3" href="{{route('comics.edit', $comic->id)}}">Edit</a>
                     <form method="POST" action="{{route('comics.destroy', $comic->id)}}">
                         @csrf
                         @method('DELETE')
