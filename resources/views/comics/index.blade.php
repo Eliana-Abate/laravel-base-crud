@@ -45,10 +45,10 @@
                             <td class="p-3">{{$comic->series}}</td>
                             <td class="p-3">{{$comic->sale_date}}</td>
                             <td class="p-3">{{$comic->type}}</td>
-                            <td class="p-3 text-center">
+                            <td class="p-3 text-center d-flex flex-column">
                                 <a class="btn btn-success" href="{{route('comics.show', $comic->id)}}">Show</a>
                                 <a class="btn btn-warning mt-2" href="{{route('comics.edit', $comic->id)}}">Edit</a>
-                                <form method="POST" action="{{route('comics.destroy', $comic->id)}}" id="delete-event">
+                                <form method="POST" action="{{route('comics.destroy', $comic->id)}}" class="delete-event" data-comic="{{$comic->title}}">
                                     @csrf
                                     @method('DELETE')
                                     <button class="btn btn-danger mt-2" type="submit">Delete</button>
@@ -71,12 +71,17 @@
 
 @section('scripts')
     <script>
-        const deleteItem = document.getElementById('delete-event');
-        deleteItem.addEventListener('submit', function(event){
+        const deleteItems = document.querySelectorAll('.delete-event');
+        deleteItems.forEach(item => {
+            item.addEventListener('submit', function(event){
+            const title = item.getAttribute('data-comic');
             event.preventDefault();
-            const confirmAction = window.confirm('Vuoi realmente rimuovere {{$comic->title}} dalla lista?');
+            const confirmAction = window.confirm(`Vuoi realmente rimuovere ${title} dalla lista?`);
             if (confirmAction) this.submit();
         });
+
+        });
+       
     </script>
     
 @endsection
