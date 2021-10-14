@@ -14,7 +14,7 @@
             <table class="table bg-white border border-5 border-dark mb-5">
                 <thead>
                   <tr>
-                    <th class="p-3" scope="col">#</th>
+                    <th class="p-3" scope="col">#id</th>
                     <th class="p-3" scope="col">Titolo</th>
                     <th class="p-3" scope="col">Descrizione</th>
                     <th class="p-3" scope="col">Copertina</th>
