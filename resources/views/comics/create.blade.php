@@ -6,6 +6,16 @@
     <h1 class="text-white text-center pb-5">Aggiungi un nuovo fumetto</h1>
     <div class="container pb-5">
         <div class="row border border-5 border-primary bg-white p-5">
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{$error}}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                
+            @endif
             <form method="POST" action="{{route('comics.store')}}">
                 @csrf
 
