@@ -62,7 +62,7 @@
                 </div>
 
                 <div class="d-flex justify-content-center">
-                    <a class="btn btn-warning me-3" href="{{url()->previous()}}">Indietro</a>
+                    <a class="btn btn-warning me-3" href="{{route('comics.index')}}">Indietro</a>
                     <button type="reset" class="btn btn-secondary me-3">Reset</button>
                     <button type="submit" class="btn btn-primary">Salva modifiche</button>
                 </div> 
