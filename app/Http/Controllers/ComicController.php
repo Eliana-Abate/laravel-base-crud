@@ -40,8 +40,8 @@ class ComicController extends Controller
         $request->validate([
             'title' => 'required|string|unique:comics|max: 100',
             'series' => 'required|string|max: 50',
-            'price' => 'required|min:1|max:6',
-            'sale_date' => 'required|max: 10', 
+            'price' => 'required|numeric',
+            'sale_date' => 'required|date', 
             'description' => 'min:0|unique:comics',
             'thumb' => 'min:0|unique:comics',
             'type' => 'min:0|max: 20'
@@ -88,8 +88,8 @@ class ComicController extends Controller
         $request->validate([
             'title' => 'required|string|unique:comics|max: 100',
             'series' => 'required|string|max: 50',
-            'price' => 'required|min:1|max:6',
-            'sale_date' => 'required|max: 10', 
+            'price' => 'required|numeric',
+            'sale_date' => 'required|date', 
             'description' => 'min:0|unique:comics',
             'thumb' => 'min:0|unique:comics',
             'type' => 'min:0|max: 20'
