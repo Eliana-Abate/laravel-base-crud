@@ -22,41 +22,41 @@
                 <div class="row">
                     <div class="col-6 mb-3">
                         <label for="title" class="form-label">Titolo</label>
-                        <input type="text" class="form-control" id="title" name="title" value="{{old('title', $comic->title)}}" >
+                        <input type="text" class="form-control @error ('title')is-invalid @enderror" id="title" name="title" value="{{old('title', $comic->title)}}" >
                     </div>
 
                     <div class="col-6 mb-3">
                           <label for="series" class="form-label">Serie</label>
-                          <input type="text" class="form-control" id="series" name="series" value="{{old('series', $comic->series)}}">
+                          <input type="text" class="form-control @error ('series') is-invalid @enderror" id="series" name="series" value="{{old('series', $comic->series)}}">
                     </div>
                 </div>
                 
                 <div class="mb-3">
                     
                     <label for="description" class="form-label">Descrizione</label>
-                    <textarea class="form-control"  id="description" name="description" style="height: 100px" value="{{old('description',$comic->description)}}">{{$comic->description}}</textarea>
+                    <textarea class="form-control @error ('description') is-invalid @enderror"  id="description" name="description" style="height: 100px" value="{{old('description',$comic->description)}}">{{$comic->description}}</textarea>
 
                 </div>
 
                 <div class="mb-3">
                     <label for="thumb" class="form-label">Url copertina</label>
-                    <input type="text" class="form-control" id="thumb" name="thumb" value="{{old('thumb',$comic->thumb)}}">
+                    <input type="text" class="form-control @error ('thumb') is-invalid @enderror" id="thumb" name="thumb" value="{{old('thumb',$comic->thumb)}}">
                 </div>
 
                 <div class="row mb-5">
                     <div class="col-4 mb-3">
                         <label for="price" class="form-label">Prezzo</label>
-                        <input type="text" class="form-control" id="price" name="price" value="{{old('price', $comic->price)}}">
+                        <input type="text" class="form-control @error ('price')is-invalid @enderror" id="price" name="price" value="{{old('price', $comic->price)}}">
                     </div>
 
                     <div class="col-4 mb-3">
                         <label for="sale_date" class="form-label">Data di uscita</label>
-                        <input type="text" class="form-control" id="sale_date" name="sale_date" value="{{old('sale_date', $comic->sale_date)}}">
+                        <input type="text" class="form-control @error ('sale_date')is-invalid @enderror" id="sale_date" name="sale_date" value="{{old('sale_date', $comic->sale_date)}}">
                     </div>
 
                     <div class="col-4 mb-3">
                         <label for="type" class="form-label">Tipologia</label>
-                        <input type="text" class="form-control" id="type" name="type" value="{{old('type', $comic->type)}}">
+                        <input type="text" class="form-control @error ('type')is-invalid @enderror" id="type" name="type" value="{{old('type', $comic->type)}}">
                     </div>
 
                 </div>
