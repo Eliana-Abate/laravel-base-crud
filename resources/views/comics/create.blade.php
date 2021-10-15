@@ -14,7 +14,6 @@
                         @endforeach
                     </ul>
                 </div>
-                
             @endif
             <form method="POST" action="{{route('comics.store')}}">
                 @csrf
