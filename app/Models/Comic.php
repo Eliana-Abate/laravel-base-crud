@@ -14,6 +14,10 @@ class Comic extends Model
     }
 
     public function getUpdatedAt() {
-        return Carbon::create($this->updated_at)->format('d-m-Y H:i:s');
+        if ($this->updated_at != $this->created_at) {
+            return Carbon::create($this->updated_at)->format('d-m-Y H:i:s');
+        } else {
+            return '';
+        }
     }
 }
