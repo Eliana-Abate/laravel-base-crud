@@ -29,6 +29,8 @@
                     <th class="p-3" scope="col">Serie</th>
                     <th class="p-3" scope="col">Data</th>
                     <th class="p-3" scope="col">Tipologia</th>
+                    <th>Creato in data:</th>
+                    <th>Ultima modifica:</th>
                     <th class="p-3 text-center" scope="col">Azioni</th>
                   </tr>
                 </thead>
@@ -36,8 +38,8 @@
                     @forelse ($comics as $comic)
                         <tr>
                             <th class="p-3" scope="row">{{$comic->id}}</th>
-                            <td class="p-3">{{$comic->title}}</td>
-                            <td class="p-3 text-truncate" style="max-width: 300px;">{{$comic->description}}</td>
+                            <td class="p-3" style="max-width: 200px;">{{$comic->title}}</td>
+                            <td class="p-3 text-truncate" style="max-width: 250px;">{{$comic->description}}</td>
                             <td class="p-3">
                                 <img class="img-fluid" src="{{$comic->thumb}}" alt="{{$comic->title}}" width="80">
                             </td> 
@@ -45,6 +47,8 @@
                             <td class="p-3">{{$comic->series}}</td>
                             <td class="p-3">{{$comic->sale_date}}</td>
                             <td class="p-3">{{$comic->type}}</td>
+                            <td></td>
+                            <td></td>
                             <td class="p-3 text-center d-flex flex-column">
                                 <a class="btn btn-success" href="{{route('comics.show', $comic->id)}}">Show</a>
                                 <a class="btn btn-warning mt-2" href="{{route('comics.edit', $comic->id)}}">Edit</a>
