@@ -47,8 +47,8 @@
                             <td class="p-3">{{$comic->series}}</td>
                             <td class="p-3">{{$comic->sale_date}}</td>
                             <td class="p-3">{{$comic->type}}</td>
-                            <td></td>
-                            <td></td>
+                            <td>{{$comic->getCreatedAt()}}</td>
+                            <td>{{$comic->getUpdatedAt()}}</td>
                             <td class="p-3 text-center d-flex flex-column">
                                 <a class="btn btn-success" href="{{route('comics.show', $comic->id)}}">Show</a>
                                 <a class="btn btn-warning mt-2" href="{{route('comics.edit', $comic->id)}}">Edit</a>
